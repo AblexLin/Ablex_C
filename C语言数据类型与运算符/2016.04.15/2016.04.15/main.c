@@ -9,7 +9,11 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    int a,b;
+    printf("请输入第一个数字:");
+    scanf("%d",&a);
+    printf("请输入第二个数字:");
+    scanf("%d",&b);
+    printf("%d + %d = %d\n",a,b,a+b);
     return 0;
 }
