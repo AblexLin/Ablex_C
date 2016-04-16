@@ -12,11 +12,17 @@ int main(int argc, const char * argv[]) {
     int a;
     printf("请输入一个数字:");
     scanf("%d",&a);
-    if (a%2==0) {
-        printf("%d是一个偶数！\n",a);
+    if (a<60) {
+        printf("%d不及格\n",a);
+    }
+    else if(a<80){
+        printf("%d及格\n",a);
+    }
+    else if(a<100){
+        printf("%d优秀\n",a);
     }
     else{
-        printf("%d是一个奇数！\n",a);
+        printf("%d满分\n",a);
     }
     return 0;
 }
