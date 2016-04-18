@@ -10,9 +10,12 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    int i;
-    for (i=0; i<100; i++) {
+    int i,a;
+    scanf("%d",&a);
+    for (i=a; i>0; i=i-2) {
         printf("%d\n",i);
+        break;//跳出循环
+        continue;//跳出本次循环，开始下一次
     }
     printf("i=%d\n",i);
     return 0;
