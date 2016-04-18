@@ -10,7 +10,7 @@
 
 int main(int argc, const char * argv[]) {
     //for 循环实现水仙花数
-    int i,j,k,n=100;
+    //int i,j,k,n=100;
     /*printf("'water flower'number is:");
     for(n=100;n<1000;n++)
     {
@@ -33,7 +33,7 @@ int main(int argc, const char * argv[]) {
         n++;
     }*/
     //do while 循环实现水仙花数
-    do{
+    /*do{
         i=n/100;
         j=n/10%10;
         k=n%100%10;
@@ -41,6 +41,7 @@ int main(int argc, const char * argv[]) {
             printf("这是水仙花数:%d\n",n);
         }
         n++;
-    }while(n<1000);
+    }while(n<1000);*/
+    
     return 0;
 }
