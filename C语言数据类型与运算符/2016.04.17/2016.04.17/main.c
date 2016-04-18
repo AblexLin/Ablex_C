@@ -10,13 +10,25 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    int i,a;
-    scanf("%d",&a);
-    for (i=a; i>0; i=i-2) {
-        printf("%d\n",i);
-        break;//跳出循环
-        continue;//跳出本次循环，开始下一次
+//    int i,j;
+//    for (i=3; i<4; i++)
+//    {
+//        printf("循环内i=%d\n",i);
+//        for (j=2; j<5; j++)
+//        {
+//             printf("循环内j=%d\n",j);
+//        }
+//    }
+//    printf("循环外i=%d\n",i);
+    int a,b,c;
+    for (a=0;a<10;a++){
+        for (b=0;b<10;b++){
+            for (c=0;c<10;c++){
+                if((a*100+b*10+c)+(c*100+b*10+a)==1333){
+                    printf("a=%d,b=%d,c=%d\n",a,b,c);
+                }
+            }
+        }
     }
-    printf("i=%d\n",i);
     return 0;
 }
