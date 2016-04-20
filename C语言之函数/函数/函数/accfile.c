@@ -7,9 +7,9 @@
 //
 
 #include "accfile.h"//这其实是包含了声明
-int b;
 int acceleratesum(int a)
 {
+    int b;
     for (int i=0; i<=a; i++) {
         b+=i;
     }
