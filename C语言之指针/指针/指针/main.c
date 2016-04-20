@@ -9,7 +9,17 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+//    int a ;
+//    a=199;
+//    printf("%p\n",&a);
+//    printf("%d\n",*&a);
+    //&变量--取地址
+    //*地址--取值
+    //指针变量
+    int a;
+    int *p;//指针变量
+    p=&a;//指针变量初始化
+    *p=100;//其实就是a＝100
+    printf("%d",a);
     return 0;
 }
