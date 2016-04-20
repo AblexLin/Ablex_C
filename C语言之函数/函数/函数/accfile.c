@@ -6,11 +6,12 @@
 //  Copyright © 2016年 顾明轩. All rights reserved.
 //
 
-#include "accfile.h"
+#include "accfile.h"//这其实是包含了声明
+int b;
 int acceleratesum(int a)
 {
     for (int i=0; i<=a; i++) {
-        a+=i;
+        b+=i;
     }
-    return a;
+    return b;
 }
