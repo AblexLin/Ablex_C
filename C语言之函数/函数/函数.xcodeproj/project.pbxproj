@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7F70CC1C1CC6F2CD00E6C351 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 7F70CC1B1CC6F2CD00E6C351 /* main.c */; };
-		7F70CC241CC6F4FE00E6C351 /* accfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 7F70CC221CC6F4FE00E6C351 /* accfile.c */; settings = {ASSET_TAGS = (); }; };
 		7F70CC271CC70A9200E6C351 /* get_average.c in Sources */ = {isa = PBXBuildFile; fileRef = 7F70CC251CC70A9200E6C351 /* get_average.c */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -27,8 +26,6 @@
 /* Begin PBXFileReference section */
 		7F70CC181CC6F2CD00E6C351 /* 函数 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "函数"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F70CC1B1CC6F2CD00E6C351 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		7F70CC221CC6F4FE00E6C351 /* accfile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = accfile.c; sourceTree = "<group>"; };
-		7F70CC231CC6F4FE00E6C351 /* accfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = accfile.h; sourceTree = "<group>"; };
 		7F70CC251CC70A9200E6C351 /* get_average.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = get_average.c; sourceTree = "<group>"; };
 		7F70CC261CC70A9200E6C351 /* get_average.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = get_average.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,8 +63,6 @@
 				7F70CC1B1CC6F2CD00E6C351 /* main.c */,
 				7F70CC251CC70A9200E6C351 /* get_average.c */,
 				7F70CC261CC70A9200E6C351 /* get_average.h */,
-				7F70CC221CC6F4FE00E6C351 /* accfile.c */,
-				7F70CC231CC6F4FE00E6C351 /* accfile.h */,
 			);
 			path = "函数";
 			sourceTree = "<group>";
@@ -129,7 +124,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F70CC1C1CC6F2CD00E6C351 /* main.c in Sources */,
-				7F70CC241CC6F4FE00E6C351 /* accfile.c in Sources */,
 				7F70CC271CC70A9200E6C351 /* get_average.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
