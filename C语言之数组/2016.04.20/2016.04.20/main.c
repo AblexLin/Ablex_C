@@ -7,9 +7,11 @@
 //
 
 #include <stdio.h>
-
+#include "savedata.h"
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    //函数结合数组的实例学习
+
+    save_data_print_data();
+    
     return 0;
 }
