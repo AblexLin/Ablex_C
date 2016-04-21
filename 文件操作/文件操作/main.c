@@ -19,8 +19,10 @@ int main(int argc, const char * argv[]) {
     if (student_score_file==NULL) {
         printf("打开文件失败");
     }
+    for (int i='a'; i<='z'; i++) {
+        fputc(i, student_score_file);
+    }
     
-    fputc('c', student_score_file);
     fclose(student_score_file);
     return 0;
 }
