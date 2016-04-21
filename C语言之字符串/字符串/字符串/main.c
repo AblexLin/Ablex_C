@@ -31,15 +31,32 @@ int main(int argc, const char * argv[]) {
 //    
 //    char *sss="轩爷";
 //    printf("%d",strlen(sss));//不包含'\0'的函数
-    char sss[]="顾明轩";
-    if (strcmp("顾明轩", sss)==0) {
-        printf("正确\n");
+//    char sss[]="顾明轩";
+//    if (strcmp("顾明轩", sss)==0) {
+//        printf("正确\n");
+//    }
+//    char cp[10];
+//    strcpy(cp, sss);
+//    printf("%s\n",cp);
+//    char cat[20]="帅哥";
+//    strcat(cat, sss);
+//    printf("%s\n",cat);
+    char *name[100];
+    char my_name[20];
+    for (int i=0; i<2; i++) {
+        scanf("%s",my_name);
+        name[i]=my_name;
     }
-    char cp[10];
-    strcpy(cp, sss);
-    printf("%s\n",cp);
-    char cat[20]="帅哥";
-    strcat(cat, sss);
-    printf("%s\n",cat);
+    printf("%s,%s\n",name[0],name[1]);
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
