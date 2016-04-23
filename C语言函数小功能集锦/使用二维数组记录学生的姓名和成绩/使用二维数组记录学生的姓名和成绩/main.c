@@ -41,6 +41,14 @@ int main(int argc, const char * argv[]) {
         printf("学生姓名:%s\t学生成绩:%d\n",name[i],score[i]);
     }
     
+    char input_name[20];
+    printf("请输入一个名称来查询成绩:");
+    scanf("%s",input_name);
+    for (int i=0; i<STD_COUNT; i++) {
+        if (strcmp(input_name, name[i])==0) {
+            printf("%s的成绩是:%d\n",name[i],score[i]);
+        }
+    }
 //    input_child_name_score(name,score);
     
 //    output_child_name_score(name);
