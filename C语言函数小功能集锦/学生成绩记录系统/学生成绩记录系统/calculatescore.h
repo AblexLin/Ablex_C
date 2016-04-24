@@ -10,6 +10,7 @@
 #define calculatescore_h
 
 #include <stdio.h>
+#include <string.h>
 
 #define STD_COUNT 100
 #define STD_SUBJECT 10

@@ -19,7 +19,7 @@ int main(int argc, const char * argv[]) {
     
     inputinfo(&student_count, &subject_count, std_name, std_subject, std_score);//记录成绩
 //    printf("%d;%d\t",student_count,subject_count);
-    calculatescore(&student_count, &subject_count, std_name, std_score);//计算总分
+    calculatescore(&student_count, &subject_count, std_name, std_score);//计算总分并排名
     //运行结果如下
 //    请输入班级学生总人数:2
 //    请输入班级的学科总数:3
