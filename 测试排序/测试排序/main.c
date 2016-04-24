@@ -11,7 +11,7 @@
 int main(int argc, const char * argv[]) {
     int num[10]={0,1,2,3,4,5,6,7,8,9};
     for (int i=0; i<9; i++) {
-        for (int j=i; j<10; j++) {
+        for (int j=i+1; j<10; j++) {
             if (num[i]>num[j]) {
                 int t=num[i];
                 num[i]=num[j];

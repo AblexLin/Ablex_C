@@ -26,7 +26,7 @@ void calculatescore(int *student_count, int *subject_count, char std_name[][20],
     char t_name[20]={};
     //给成绩排序
     for (int i=0; i<*student_count-1; i++) {
-        for (int j=i; j<*student_count; j++) {
+        for (int j=i+1; j<*student_count; j++) {
             if (all_score[i]<all_score[j]) {
                 //交换总分
                 int t=all_score[i];
