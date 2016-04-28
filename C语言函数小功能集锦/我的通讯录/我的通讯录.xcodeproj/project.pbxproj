@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F407D951CD0DFFC00EB6D3B /* linker.c in Sources */ = {isa = PBXBuildFile; fileRef = 7F407D931CD0DFFC00EB6D3B /* linker.c */; settings = {ASSET_TAGS = (); }; };
 		7F51B13F1CCFA233004EB18C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 7F51B13E1CCFA233004EB18C /* main.c */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F407D931CD0DFFC00EB6D3B /* linker.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = linker.c; sourceTree = "<group>"; };
+		7F407D941CD0DFFC00EB6D3B /* linker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linker.h; sourceTree = "<group>"; };
 		7F51B13B1CCFA233004EB18C /* 我的通讯录 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "我的通讯录"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F51B13E1CCFA233004EB18C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				7F51B13E1CCFA233004EB18C /* main.c */,
+				7F407D931CD0DFFC00EB6D3B /* linker.c */,
+				7F407D941CD0DFFC00EB6D3B /* linker.h */,
 			);
 			path = "我的通讯录";
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F407D951CD0DFFC00EB6D3B /* linker.c in Sources */,
 				7F51B13F1CCFA233004EB18C /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +241,7 @@
 				7F51B1441CCFA233004EB18C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
