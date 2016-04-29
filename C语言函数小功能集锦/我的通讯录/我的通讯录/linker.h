@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_LINKER 10
+#define MAX_LINKER 1000
 
 void write_linker(int start, int own_linker_count);//写入联系人
 void read_linker(int start, int own_linker_count);//读取联系人

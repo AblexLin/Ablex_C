@@ -32,9 +32,8 @@ int main(int argc, const char * argv[]) {
             continue;
         }
         else if (strcmp(menu_number, "3")==0) {
-            printf("3.开始修改联系人\n");
             modify_linker();
-            break;
+            continue;
         }
         else if (strcmp(menu_number, "4")==0) {
             printf("4.开始查找联系人\n");

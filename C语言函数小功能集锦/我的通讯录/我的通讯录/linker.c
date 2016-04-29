@@ -93,10 +93,10 @@ void add_linker(){
         else{
             fwrite(person[i].tel, sizeof(person[i].tel), 1, linker_file);
         }
-        
+        //每次添加后，叠加已有联系人数目
         own_linker_count++;
     }
-
+    fclose(linker_file);
 }
 
 void del_linker(){
@@ -120,28 +120,37 @@ void del_linker(){
 }
 
 void modify_linker(){
-    printf("***进入modify_linker函数***\n");
+    char old_name[20];
+    char new_name[20];
+    char new_tel[12];
+    
+    printf("请输入需要修改的联系人姓名:");
+    scanf("%s",old_name);
+    
+    read_linker(0, own_linker_count);
+    for (int i=0; i<own_linker_count; i++) {
+        if (strcmp(old_name, person[i].name)==0) {
+            printf("请输入新的姓名:");
+            scanf("%s",new_name);
+            strcpy(person[i].name, new_name);
+            printf("请输入新的电话:");
+            scanf("%s",new_tel);
+            strcpy(person[i].tel, new_tel);
+        }
+    }
+    write_linker(0, own_linker_count);
 }
 void find_linker(){
     printf("***进入find_linker函数***\n");
 }
 void show_linker(){
-    linker_file=fopen("联系人.data", "rb");
-    if (linker_file==NULL) {
-        printf("暂无联系人,请添加联系人\n");
-    }
-    else{
-        for (int i=0; i<own_linker_count; i++) {
-            
-            fread(person[i].name, sizeof(person[i].name), 1, linker_file);
-            fread(person[i].tel, sizeof(person[i].tel), 1, linker_file);
-            if (strcmp(person[i].name, "")==0 || strcmp(person[i].tel, "")==0) {
-                fclose(linker_file);
-                break;
-            }
-            else{
-                printf("%s,%s\n",person[i].name,person[i].tel);
-            }
+    read_linker(0, own_linker_count);
+    for (int i=0; i<own_linker_count; i++) {
+        if (strcmp(person[i].name, "")==0 || strcmp(person[i].tel, "")==0) {
+            break;
+        }
+        else{
+            printf("%s,%s\n",person[i].name,person[i].tel);
         }
     }
 }
