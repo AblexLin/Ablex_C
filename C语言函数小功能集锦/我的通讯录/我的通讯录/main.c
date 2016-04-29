@@ -46,14 +46,12 @@ int main(int argc, const char * argv[]) {
             continue;
         }
         else if (strcmp(menu_number, "6")==0) {
-            printf("6.开始退出通讯录\n");
             exit(0);                //退出程序
         }
         else{
-            printf("错误的菜单选择，请重新选择!\n");
+            printf("***错误的菜单选择，请重新选择!***\n");
             show_menu();
-            continue
-            ;
+            continue;
         }
     
     }

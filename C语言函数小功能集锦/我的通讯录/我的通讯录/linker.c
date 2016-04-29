@@ -68,12 +68,10 @@ void init(){
 }
 
 void add_linker(){
-    printf("***进入add_linker函数***\n");
     linker_file=fopen("联系人.data", "wb");
-    for (int i=0; i<own_linker_count; i++) {
-        fwrite(person[i].name, sizeof(person[i].name), 1, linker_file);
-        fwrite(person[i].tel, sizeof(person[i].tel), 1, linker_file);
-    }
+    
+    write_linker(0, own_linker_count);
+    
     for (int i=own_linker_count; i<MAX_LINKER; i++) {
         
         printf("请输入联系人的姓名:");
@@ -102,8 +100,6 @@ void add_linker(){
 }
 
 void del_linker(){
-    printf("***进入del_linker函数***\n");
-    
     char del_name[20];
     printf("请输入需要删除的联系人姓名:");
     scanf("%s", del_name);
@@ -130,7 +126,6 @@ void find_linker(){
     printf("***进入find_linker函数***\n");
 }
 void show_linker(){
-    printf("***进入show_linker函数***\n");
     linker_file=fopen("联系人.data", "rb");
     if (linker_file==NULL) {
         printf("暂无联系人,请添加联系人\n");
