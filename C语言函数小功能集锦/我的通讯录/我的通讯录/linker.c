@@ -68,9 +68,12 @@ void init(){
 }
 
 void add_linker(){
-    linker_file=fopen("联系人.data", "wb");
-    
-    write_linker(0, own_linker_count);
+    read_linker(0, own_linker_count);
+    linker_file =fopen("联系人.data", "wb");
+    for (int i=0; i<own_linker_count; i++) {
+        fwrite(person[i].name, sizeof(person[i].name), 1, linker_file);
+        fwrite(person[i].tel, sizeof(person[i].tel), 1, linker_file);
+    }
     
     for (int i=own_linker_count; i<MAX_LINKER; i++) {
         
@@ -93,8 +96,7 @@ void add_linker(){
         else{
             fwrite(person[i].tel, sizeof(person[i].tel), 1, linker_file);
         }
-        //每次添加后，叠加已有联系人数目
-        own_linker_count++;
+        own_linker_count++;//实时更新已有联系人个数
     }
     fclose(linker_file);
 }
@@ -141,7 +143,16 @@ void modify_linker(){
     write_linker(0, own_linker_count);
 }
 void find_linker(){
-    printf("***进入find_linker函数***\n");
+    read_linker(0, own_linker_count);
+    char find_name[20];
+    printf("请输入姓名查找电话号码:");
+    scanf("%s",find_name);
+    
+    for (int i=0; i<own_linker_count; i++) {
+        if (strcmp(find_name, person[i].name)==0) {
+            printf("您查找的%s的电话号码是:%s\n",person[i].name,person[i].tel);
+        }
+    }
 }
 void show_linker(){
     read_linker(0, own_linker_count);

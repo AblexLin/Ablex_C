@@ -36,9 +36,8 @@ int main(int argc, const char * argv[]) {
             continue;
         }
         else if (strcmp(menu_number, "4")==0) {
-            printf("4.开始查找联系人\n");
             find_linker();
-            break;
+            continue;
         }
         else if (strcmp(menu_number, "5")==0) {
             show_linker();
