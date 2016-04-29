@@ -17,6 +17,30 @@ Linker person[MAX_LINKER]={};
 int own_linker_count=0;
 FILE *linker_file =NULL;
 
+void write_linker(int start, int own_linker_count){
+    linker_file=fopen("联系人.data", "wb");
+    if (!linker_file) {
+        printf("文件写入失败!");
+    }
+    for (int i=start; i<own_linker_count; i++) {
+        fwrite(person[i].name, sizeof(person[i].name), 1, linker_file);
+        fwrite(person[i].tel, sizeof(person[i].tel), 1, linker_file);
+    }
+    fclose(linker_file);
+}
+
+void read_linker(int start, int own_linker_count){
+    linker_file=fopen("联系人.data", "rb");
+    if (!linker_file) {
+        printf("文件读取失败!");
+    }
+    for (int i=start; i<own_linker_count; i++) {
+        fread(person[i].name, sizeof(person[i].name), 1, linker_file);
+        fread(person[i].tel, sizeof(person[i].tel), 1, linker_file);
+    }
+    fclose(linker_file);
+}
+
 void show_menu(){
     printf("1.添加联系人\n");
     printf("2.删除联系人\n");
@@ -79,7 +103,26 @@ void add_linker(){
 
 void del_linker(){
     printf("***进入del_linker函数***\n");
+    
+    char del_name[20];
+    printf("请输入需要删除的联系人姓名:");
+    scanf("%s", del_name);
+    for (int i=0; i<own_linker_count; i++) {
+        if (strcmp(del_name, person[i].name)==0) {
+            for (int j=i; j<=own_linker_count; j++) {
+                if (j==own_linker_count) {
+                    strcpy(person[j].name, "");//最后的时候写空
+                    strcpy(person[j].tel, "");//最后的时候写空
+                }
+                strcpy(person[j].name, person[j+1].name);//交换姓名
+                strcpy(person[j].tel, person[j+1].tel);//交换电话
+            }
+            own_linker_count-=1;//删除联系人以后，减少已有联系人个数
+        }
+    }
+    write_linker(0, own_linker_count);
 }
+
 void modify_linker(){
     printf("***进入modify_linker函数***\n");
 }

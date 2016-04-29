@@ -24,14 +24,12 @@ int main(int argc, const char * argv[]) {
         scanf("%s",menu_number);
         
         if (strcmp(menu_number, "1")==0) {
-            printf("1.开始添加联系人\n");
             add_linker();
             continue;
         }
         else if (strcmp(menu_number, "2")==0) {
-            printf("2.开始删除联系人\n");
             del_linker();
-            break;
+            continue;
         }
         else if (strcmp(menu_number, "3")==0) {
             printf("3.开始修改联系人\n");
@@ -54,7 +52,8 @@ int main(int argc, const char * argv[]) {
         else{
             printf("错误的菜单选择，请重新选择!\n");
             show_menu();
-            break;
+            continue
+            ;
         }
     
     }

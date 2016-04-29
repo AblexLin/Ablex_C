@@ -15,6 +15,9 @@
 
 #define MAX_LINKER 10
 
+void write_linker(int start, int own_linker_count);//写入联系人
+void read_linker(int start, int own_linker_count);//读取联系人
+
 void show_menu();
 /*显示菜单的函数*/
 
